@@ -4,14 +4,14 @@
 2. Run the below to install Git, clone the repo, and install several packages
   ```
   sudo dnf install git-all -y
-  git clone https://github.com/bobpeulen/apache_kafka.git
+  git clone https://github.com/bobpeulen/real_time_rag.git
   sudo pip3 install kafka-python3 pandas numpy datetime
   ```
 
 3. Run the producer. 
 
 ```
-python apache_kafka/oci_streaming/producer.py  \
+python real_time_rag//producer.py  \
 -tenancy_name 'oraemeadatamgmt' \
 -region 'eu-frankfurt-1' \
 -user_name 'OracleIdentityCloudService/bob.peulen@oracle.com' \
