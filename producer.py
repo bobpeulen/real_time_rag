@@ -30,7 +30,7 @@ auth_token = args.auth_token
 
 def main():
   ## create connection
-    producer = KafkaProducer(bootstrap_servers = f'cell-1.streaming.{region}.oci.oraclecloud.com:9092', linger_ms = 50, batch_size  = 2,
+    producer = KafkaProducer(bootstrap_servers = f'cell-1.streaming.{region}.oci.oraclecloud.com:9092', linger_ms = 50, batch_size  = 1,
                          security_protocol = 'SASL_SSL', sasl_mechanism = 'PLAIN',
                          value_serializer = lambda v: v.encode('utf-8'),
                          sasl_plain_username = f'{tenancy_name}/{user_name}/{stream_pool_ocid}',
